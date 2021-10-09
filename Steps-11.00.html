@@ -1,0 +1,203 @@
+
+Dax Measures
+11
+<p>Create the following Dax and Measures</p><p><br></p><p class="MsoNormal" align="center" style="text-align:center"><b><u><span style="font-size:18.0pt;line-height:107%;font-family:Cavolini;background:darkgray;
+mso-highlight:darkgray">DAX AND MEASURES</span></u></b><b><u><span style="font-size:18.0pt;line-height:107%;font-family:Cavolini"><o:p></o:p></span></u></b></p><p class="MsoNormal" style="margin-top:12.0pt"><span style="font-size:9.0pt;
+line-height:107%;font-family:Cavolini"><o:p>&nbsp;</o:p></span></p><p class="MsoListParagraph" style="margin-top:12.0pt;mso-add-space:auto;
+text-indent:-.25in;mso-list:l0 level1 lfo1"><!--[if !supportLists]--><b><span style="font-size:16.0pt;line-height:107%;font-family:Cavolini;mso-fareast-font-family:
+Cavolini">1.<span style="font-variant-numeric: normal; font-variant-east-asian: normal; font-weight: normal; font-stretch: normal; font-size: 7pt; line-height: normal; font-family: &quot;Times New Roman&quot;;">
+</span></span></b><!--[endif]--><b><u><span style="font-size:16.0pt;
+line-height:107%;font-family:Cavolini">Total Attacks<o:p></o:p></span></u></b></p><p class="MsoNormal" style="margin-top:12.0pt"><span style="font-size:16.0pt;
+line-height:107%;font-family:Cavolini;mso-fareast-font-family:&quot;Times New Roman&quot;;
+color:black">Total Attacks = CALCULATE( SUM('Datasets Plots'[Non-Prevention
+Count])) + SUM('Datasets Plots'[Prevention Count])<o:p></o:p></span></p><p class="MsoNormal" style="margin-top:12.0pt"><span style="font-size:9.0pt;
+line-height:107%;font-family:Cavolini;mso-fareast-font-family:&quot;Times New Roman&quot;;
+color:black"><o:p>&nbsp;</o:p></span></p><p class="MsoListParagraph" style="margin-top:12.0pt;margin-right:0in;margin-bottom:
+0in;margin-left:.5in;mso-add-space:auto;text-indent:-.25in;mso-line-height-alt:
+13.5pt;mso-list:l0 level1 lfo1;background:#FFFFFE"><!--[if !supportLists]--><b><span style="font-size:16.0pt;font-family:Cavolini;mso-fareast-font-family:Cavolini;
+color:black">2.<span style="font-variant-numeric: normal; font-variant-east-asian: normal; font-weight: normal; font-stretch: normal; font-size: 7pt; line-height: normal; font-family: &quot;Times New Roman&quot;;">
+</span></span></b><!--[endif]--><b><u><span style="font-size:16.0pt;
+font-family:Cavolini;mso-fareast-font-family:&quot;Times New Roman&quot;;color:black">Attacks/Month<o:p></o:p></span></u></b></p><p class="MsoNormal" style="margin-top:12.0pt;margin-right:0in;margin-bottom:
+0in;margin-left:0in;mso-line-height-alt:13.5pt;background:#FFFFFE"><span style="font-size:16.0pt;font-family:Cavolini;mso-fareast-font-family:&quot;Times New Roman&quot;;
+color:black">Attacks/Month = DIVIDE([Total Attacks],117)<o:p></o:p></span></p><p class="MsoNormal" style="margin-top:12.0pt;margin-right:0in;margin-bottom:
+0in;margin-left:0in;line-height:13.5pt;background:#FFFFFE"><span style="font-size:9.0pt;font-family:Cavolini;mso-fareast-font-family:&quot;Times New Roman&quot;;
+color:black"><o:p>&nbsp;</o:p></span></p><p class="MsoListParagraph" style="margin-top:12.0pt;mso-add-space:auto;
+text-indent:-.25in;mso-list:l0 level1 lfo1"><!--[if !supportLists]--><b><span style="font-size:16.0pt;line-height:107%;font-family:Cavolini;mso-fareast-font-family:
+Cavolini">3.<span style="font-variant-numeric: normal; font-variant-east-asian: normal; font-weight: normal; font-stretch: normal; font-size: 7pt; line-height: normal; font-family: &quot;Times New Roman&quot;;">
+</span></span></b><!--[endif]--><b><u><span style="font-size:16.0pt;
+line-height:107%;font-family:Cavolini">Attacks/Month LY<o:p></o:p></span></u></b></p><p class="MsoNormal" style="margin-top:12.0pt;margin-right:0in;margin-bottom:
+0in;margin-left:0in;mso-line-height-alt:13.5pt;background:#FFFFFE"><span style="font-size:16.0pt;font-family:Cavolini;mso-fareast-font-family:&quot;Times New Roman&quot;;
+color:black">Attack/Month LY = CALCULATE(<o:p></o:p></span></p><p class="MsoListParagraphCxSpFirst" style="margin-top:12.0pt;margin-right:0in;
+margin-bottom:0in;margin-left:.5in;mso-add-space:auto;mso-line-height-alt:13.5pt;
+background:#FFFFFE"><span style="font-size:16.0pt;font-family:Cavolini;
+mso-fareast-font-family:&quot;Times New Roman&quot;;color:black">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [Attacks/Month],
+DATEADD(Calender[Date],-1,YEAR<o:p></o:p></span></p><p class="MsoListParagraphCxSpLast" style="margin-top:12.0pt;margin-right:0in;
+margin-bottom:0in;margin-left:.5in;mso-add-space:auto;mso-line-height-alt:13.5pt;
+background:#FFFFFE"><span style="font-size:16.0pt;font-family:Cavolini;
+mso-fareast-font-family:&quot;Times New Roman&quot;;color:black">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ))<o:p></o:p></span></p><p class="MsoNormal" style="margin-top:12.0pt"><span style="font-size:9.0pt;
+line-height:107%;font-family:Cavolini"><o:p>&nbsp;</o:p></span></p><p class="MsoListParagraph" style="margin-top:12.0pt;mso-add-space:auto;
+text-indent:-.25in;mso-list:l0 level1 lfo1"><!--[if !supportLists]--><b><span style="font-size:16.0pt;line-height:107%;font-family:Cavolini;mso-fareast-font-family:
+Cavolini">4.<span style="font-variant-numeric: normal; font-variant-east-asian: normal; font-weight: normal; font-stretch: normal; font-size: 7pt; line-height: normal; font-family: &quot;Times New Roman&quot;;">
+</span></span></b><!--[endif]--><b><u><span style="font-size:16.0pt;
+line-height:107%;font-family:Cavolini">Arrow Attacks/Month<o:p></o:p></span></u></b></p><p class="MsoNormal" style="margin-top:12.0pt;margin-right:0in;margin-bottom:
+0in;margin-left:0in;mso-line-height-alt:13.5pt;background:#FFFFFE"><span style="font-size:16.0pt;font-family:Cavolini;mso-fareast-font-family:&quot;Times New Roman&quot;;
+color:black">Arrow Attacks/Month = SWITCH(TRUE(),<o:p></o:p></span></p><p class="MsoListParagraphCxSpFirst" style="margin-top:12.0pt;margin-right:0in;
+margin-bottom:0in;margin-left:.5in;mso-add-space:auto;mso-line-height-alt:13.5pt;
+background:#FFFFFE"><span style="font-size:16.0pt;font-family:Cavolini;
+mso-fareast-font-family:&quot;Times New Roman&quot;;color:black">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [YOY] &lt; 0,
+UNICHAR(9660), UNICHAR(9650)<o:p></o:p></span></p><p class="MsoListParagraphCxSpMiddle" style="margin-top:12.0pt;margin-right:0in;
+margin-bottom:0in;margin-left:.5in;mso-add-space:auto;mso-line-height-alt:13.5pt;
+background:#FFFFFE"><span style="font-size:16.0pt;font-family:Cavolini;
+mso-fareast-font-family:&quot;Times New Roman&quot;;color:black">)<o:p></o:p></span></p><p class="MsoListParagraphCxSpMiddle" style="margin-top:12.0pt;margin-right:0in;
+margin-bottom:0in;margin-left:.5in;mso-add-space:auto;mso-line-height-alt:13.5pt;
+background:#FFFFFE"><span style="font-size:16.0pt;font-family:Cavolini;
+mso-fareast-font-family:&quot;Times New Roman&quot;;color:black"><o:p>&nbsp;</o:p></span></p><p class="MsoListParagraphCxSpMiddle" style="margin-top:12.0pt;margin-right:0in;
+margin-bottom:0in;margin-left:.5in;mso-add-space:auto;mso-line-height-alt:13.5pt;
+background:#FFFFFE"><span style="font-size:16.0pt;font-family:Cavolini;
+mso-fareast-font-family:&quot;Times New Roman&quot;;color:black"><o:p>&nbsp;</o:p></span></p><p class="MsoListParagraphCxSpMiddle" style="margin-top:12.0pt;margin-right:0in;
+margin-bottom:0in;margin-left:.5in;mso-add-space:auto;mso-line-height-alt:13.5pt;
+background:#FFFFFE"><span style="font-size:16.0pt;font-family:Cavolini;
+mso-fareast-font-family:&quot;Times New Roman&quot;;color:black"><o:p>&nbsp;</o:p></span></p><p class="MsoListParagraphCxSpLast" style="margin-top:12.0pt;mso-add-space:auto;
+text-indent:-.25in;mso-list:l0 level1 lfo1"><!--[if !supportLists]--><b><span style="font-size:16.0pt;line-height:107%;font-family:Cavolini;mso-fareast-font-family:
+Cavolini">5.<span style="font-variant-numeric: normal; font-variant-east-asian: normal; font-weight: normal; font-stretch: normal; font-size: 7pt; line-height: normal; font-family: &quot;Times New Roman&quot;;">
+</span></span></b><!--[endif]--><b><u><span style="font-size:16.0pt;
+line-height:107%;font-family:Cavolini">Color Arrow<o:p></o:p></span></u></b></p><p class="MsoNormal" style="margin-top:12.0pt;margin-right:0in;margin-bottom:
+0in;margin-left:0in;mso-line-height-alt:13.5pt;background:#FFFFFE"><span style="font-size:16.0pt;font-family:Cavolini;mso-fareast-font-family:&quot;Times New Roman&quot;;
+color:black">ColorArrow YOY = IF([Arrow Attacks/Month] = UNICHAR(9660),
+"Green", "Red")<o:p></o:p></span></p><p class="MsoNormal" style="margin-top:12.0pt;margin-right:0in;margin-bottom:
+0in;margin-left:0in;line-height:13.5pt;background:#FFFFFE"><span style="font-size:9.0pt;font-family:Cavolini;mso-fareast-font-family:&quot;Times New Roman&quot;;
+color:black"><o:p>&nbsp;</o:p></span></p><p class="MsoListParagraph" style="margin-top:12.0pt;margin-right:0in;margin-bottom:
+0in;margin-left:.5in;mso-add-space:auto;text-indent:-.25in;mso-line-height-alt:
+13.5pt;mso-list:l0 level1 lfo1;background:#FFFFFE"><!--[if !supportLists]--><b><span style="font-size:16.0pt;font-family:Cavolini;mso-fareast-font-family:Cavolini;
+color:black">6.<span style="font-variant-numeric: normal; font-variant-east-asian: normal; font-weight: normal; font-stretch: normal; font-size: 7pt; line-height: normal; font-family: &quot;Times New Roman&quot;;">
+</span></span></b><!--[endif]--><b><u><span style="font-size:16.0pt;
+font-family:Cavolini;mso-fareast-font-family:&quot;Times New Roman&quot;;color:black">YOY<o:p></o:p></span></u></b></p><p class="MsoNormal" style="margin-top:12.0pt;margin-right:0in;margin-bottom:
+0in;margin-left:0in;mso-line-height-alt:13.5pt;background:#FFFFFE"><span style="font-size:16.0pt;font-family:Cavolini;mso-fareast-font-family:&quot;Times New Roman&quot;;
+color:black">YOY = DIVIDE([Attacks/Month] - [Attack/Month LY], [Attack/Month
+LY])<o:p></o:p></span></p><p class="MsoNormal" style="margin-top:12.0pt;margin-right:0in;margin-bottom:
+0in;margin-left:0in;line-height:13.5pt;background:#FFFFFE"><span style="font-size:9.0pt;font-family:Cavolini;mso-fareast-font-family:&quot;Times New Roman&quot;;
+color:black"><o:p>&nbsp;</o:p></span></p><p class="MsoListParagraph" style="margin-top:12.0pt;margin-right:0in;margin-bottom:
+0in;margin-left:.5in;mso-add-space:auto;text-indent:-.25in;mso-line-height-alt:
+13.5pt;mso-list:l0 level1 lfo1;background:#FFFFFE"><!--[if !supportLists]--><b><span style="font-size:16.0pt;font-family:Cavolini;mso-fareast-font-family:Cavolini;
+color:black">7.<span style="font-variant-numeric: normal; font-variant-east-asian: normal; font-weight: normal; font-stretch: normal; font-size: 7pt; line-height: normal; font-family: &quot;Times New Roman&quot;;">
+</span></span></b><!--[endif]--><b><u><span style="font-size:16.0pt;
+font-family:Cavolini;mso-fareast-font-family:&quot;Times New Roman&quot;;color:black">Calender<o:p></o:p></span></u></b></p><p class="MsoNormal" style="margin-top:12.0pt;margin-right:0in;margin-bottom:
+0in;margin-left:0in;mso-line-height-alt:13.5pt;background:#FFFFFE"><span style="font-size:16.0pt;font-family:Cavolini;mso-fareast-font-family:&quot;Times New Roman&quot;;
+color:black">Calender = CALENDAR(DATE(2001,08,16), DATE(2017,01,11))<o:p></o:p></span></p><p class="MsoNormal" style="margin-top:12.0pt;margin-right:0in;margin-bottom:
+0in;margin-left:0in;line-height:13.5pt;background:#FFFFFE"><span style="font-size:4.0pt;font-family:Cavolini;mso-fareast-font-family:&quot;Times New Roman&quot;;
+color:black"><o:p>&nbsp;</o:p></span></p><p class="MsoListParagraph" style="margin-top:12.0pt;margin-right:0in;margin-bottom:
+0in;margin-left:.5in;mso-add-space:auto;text-indent:-.25in;mso-line-height-alt:
+13.5pt;mso-list:l0 level1 lfo1;background:#FFFFFE"><!--[if !supportLists]--><b><span style="font-size:16.0pt;font-family:Cavolini;mso-fareast-font-family:Cavolini;
+color:black">8.<span style="font-variant-numeric: normal; font-variant-east-asian: normal; font-weight: normal; font-stretch: normal; font-size: 7pt; line-height: normal; font-family: &quot;Times New Roman&quot;;">
+</span></span></b><!--[endif]--><b><u><span style="font-size:16.0pt;
+font-family:Cavolini;mso-fareast-font-family:&quot;Times New Roman&quot;;color:black">Days
+of the Week<o:p></o:p></span></u></b></p><p class="MsoNormal" style="margin-top:12.0pt;margin-right:0in;margin-bottom:
+0in;margin-left:0in;mso-line-height-alt:13.5pt;background:#FFFFFE"><span style="font-size:16.0pt;font-family:Cavolini;mso-fareast-font-family:&quot;Times New Roman&quot;;
+color:black">Days of Week = FORMAT(Calender[Date], "DDDD")<o:p></o:p></span></p><p class="MsoNormal" style="margin-top:12.0pt;margin-right:0in;margin-bottom:
+0in;margin-left:0in;line-height:13.5pt;background:#FFFFFE"><span style="font-size:5.0pt;font-family:Cavolini;mso-fareast-font-family:&quot;Times New Roman&quot;;
+color:black"><o:p>&nbsp;</o:p></span></p><p class="MsoListParagraph" style="margin-top:12.0pt;margin-right:0in;margin-bottom:
+0in;margin-left:.5in;mso-add-space:auto;text-indent:-.25in;mso-line-height-alt:
+13.5pt;mso-list:l0 level1 lfo1;background:#FFFFFE"><!--[if !supportLists]--><b><span style="font-size:16.0pt;font-family:Cavolini;mso-fareast-font-family:Cavolini;
+color:black">9.<span style="font-variant-numeric: normal; font-variant-east-asian: normal; font-weight: normal; font-stretch: normal; font-size: 7pt; line-height: normal; font-family: &quot;Times New Roman&quot;;">
+</span></span></b><!--[endif]--><b><u><span style="font-size:16.0pt;
+font-family:Cavolini;mso-fareast-font-family:&quot;Times New Roman&quot;;color:black">Month<o:p></o:p></span></u></b></p><p class="MsoNormal" style="margin-top:12.0pt;margin-right:0in;margin-bottom:
+0in;margin-left:0in;mso-line-height-alt:13.5pt;background:#FFFFFE"><span style="font-size:16.0pt;font-family:Cavolini;mso-fareast-font-family:&quot;Times New Roman&quot;;
+color:black">Month = FORMAT(Calender[Date], "M")<o:p></o:p></span></p><p class="MsoNormal" style="margin-top:12.0pt;margin-right:0in;margin-bottom:
+0in;margin-left:0in;line-height:13.5pt;background:#FFFFFE"><span style="font-size:7.0pt;font-family:Cavolini;mso-fareast-font-family:&quot;Times New Roman&quot;;
+color:black"><o:p>&nbsp;</o:p></span></p><p class="MsoListParagraph" style="margin-top:12.0pt;margin-right:0in;margin-bottom:
+0in;margin-left:.5in;mso-add-space:auto;text-indent:-.25in;mso-line-height-alt:
+13.5pt;mso-list:l0 level1 lfo1;background:#FFFFFE"><!--[if !supportLists]--><b><span style="font-size:16.0pt;font-family:Cavolini;mso-fareast-font-family:Cavolini;
+color:black">10.<span style="font-variant-numeric: normal; font-variant-east-asian: normal; font-weight: normal; font-stretch: normal; font-size: 7pt; line-height: normal; font-family: &quot;Times New Roman&quot;;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></b><!--[endif]--><b><span style="font-size:16.0pt;font-family:
+Cavolini;mso-fareast-font-family:&quot;Times New Roman&quot;;color:black">Month Name<o:p></o:p></span></b></p><p class="MsoNormal" style="margin-top:12.0pt;margin-right:0in;margin-bottom:
+0in;margin-left:0in;mso-line-height-alt:13.5pt;background:#FFFFFE"><span style="font-size:16.0pt;font-family:Cavolini;mso-fareast-font-family:&quot;Times New Roman&quot;;
+color:black">MonthName = FORMAT(Calender[Date], "MMMM")<o:p></o:p></span></p><p class="MsoListParagraph" style="margin-top:12.0pt;margin-right:0in;margin-bottom:
+0in;margin-left:.5in;mso-add-space:auto;text-indent:-.25in;mso-line-height-alt:
+13.5pt;mso-list:l0 level1 lfo1;background:#FFFFFE"><!--[if !supportLists]--><b><span style="font-size:16.0pt;font-family:Cavolini;mso-fareast-font-family:Cavolini;
+color:black">11.<span style="font-variant-numeric: normal; font-variant-east-asian: normal; font-weight: normal; font-stretch: normal; font-size: 7pt; line-height: normal; font-family: &quot;Times New Roman&quot;;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></b><!--[endif]--><b><u><span style="font-size:16.0pt;
+font-family:Cavolini;mso-fareast-font-family:&quot;Times New Roman&quot;;color:black">Year<o:p></o:p></span></u></b></p><p class="MsoNormal" style="margin-top:12.0pt;margin-right:0in;margin-bottom:
+0in;margin-left:0in;mso-line-height-alt:13.5pt;background:#FFFFFE"><span style="font-size:16.0pt;font-family:Cavolini;mso-fareast-font-family:&quot;Times New Roman&quot;;
+color:black">Year = (YEAR(Calender[Date]))<o:p></o:p></span></p><p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</p><p class="MsoNormal" style="margin-top:12.0pt"><span style="font-size:16.0pt;
+line-height:107%;font-family:Cavolini"><o:p>&nbsp;</o:p></span></p>
+
+Download the red icon on top page for measures and Dax
+
